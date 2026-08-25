@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <title>AI Language Lab</title><rect x="2" y="2" width="44" height="44" rx="4" fill="#24221f"/>
+  <path d="M11 12h26v18H23l-7 6v-6h-5z" fill="none" stroke="#f3eee5" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M17 21h14" stroke="#f3eee5" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="17" cy="21" r="3" fill="#c15f3c"/><circle cx="31" cy="21" r="3" fill="#c15f3c"/>
+</svg>

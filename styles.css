@@ -121,3 +121,5 @@
     :root{--muted:#5f5a53;--accent:#a94f31}
     .axis,.ends i{font-size:12px}
     .kicker,.nav-jump,.panel-head small,.brain .panel-head small,.micro,.chart-title,.metric small,.current small,.speech-foot,.note>span{font-size:13px}
+    .brand{display:inline-flex;align-items:center;gap:9px}
+    .brand::before{content:"";width:28px;height:28px;flex:0 0 28px;background:url("./assets/project-mark.svg") center/100% 100% no-repeat}
