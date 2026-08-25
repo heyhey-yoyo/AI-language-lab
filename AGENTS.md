@@ -49,6 +49,7 @@ python -m http.server 8000
 
 - **职责分离**：HTML 在 `index.html`，样式在 `styles.css`，逻辑与数据在 `app.js`。
 - CSS 变量定义在 `:root`，统一视觉令牌（颜色、字体、间距）；含 `Readability pass` 可读性增强节与多档媒体查询。
+- 视觉令牌沿用 `ydchen-portfolio`：`#f3eee5` 暖米白、`#24221f` 深色文字、`#6f6a62` 次级文字、`#c15f3c` 陶土橙强调色；实验面板、图表和控件的业务语义保持不变。
 - 模型常量与关键函数：`START`/`END` 哨兵、`makeModel()`、`trainOne()`、`meanLoss()`、`generate()`、`softmax()`、`randomGenerator()`、`frequencyTokens()` 等，命名自解释，注释为中文。
 - 界面文案与注释为简体中文，标识符用英文。
 - 保持零依赖、零构建原则，未经明确批准不得引入外部库或打包工具。
