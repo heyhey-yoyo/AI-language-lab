@@ -116,3 +116,8 @@
     .flow article>span,.flow .example{color:#ef9b87}
     .note{max-width:none;border-color:#53504b}
     @media(max-width:820px){nav{padding:21px 18px}.hero{padding-inline:18px}main section{padding-inline:18px}.section-head{display:block}.section-head>p{margin-top:18px}}
+
+    /* Visual QA baseline: micro labels remain compact but never illegibly small. */
+    :root{--muted:#5f5a53;--accent:#a94f31}
+    .axis,.ends i{font-size:12px}
+    .kicker,.nav-jump,.panel-head small,.brain .panel-head small,.micro,.chart-title,.metric small,.current small,.speech-foot,.note>span{font-size:13px}
