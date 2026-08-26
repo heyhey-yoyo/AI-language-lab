@@ -76,6 +76,17 @@
     @media(max-width:820px){nav{min-height:70px;padding:0 18px}.brand{font-size:17px}.hero{min-height:auto;padding:78px 18px 88px}h1{font-size:clamp(53px,16vw,76px)}.intro{font-size:17px;line-height:1.8}main section{padding:76px 18px 90px}.section-head{display:block}.section-head h2{font-size:42px}.section-head>p{margin-top:18px;font-size:16px}.lab-grid{display:block;box-shadow:8px 9px 0 #d9d7ce}.corpus,.brain,.controls{padding:21px}.controls{min-height:0}.speech{min-height:230px;padding:25px 22px}.speech blockquote{font-size:38px}.flow{grid-template-columns:1fr}.flow article{min-height:265px;padding:24px}.flow article>span{margin-bottom:34px}.flow p{min-height:0}.note{grid-template-columns:1fr;gap:12px}.actions{grid-template-columns:1fr 1.2fr 1fr 42px}.actions button{font-size:13px}.matrix-shell{margin-left:0;padding-left:18px}.matrix{gap:5px}.matrix .label{font-size:12px}.cell{min-height:21px}.prediction{grid-template-columns:62px 20px 1fr;padding:16px}.bar{grid-template-columns:20px 1fr 42px}.micro{font-size:13px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
+    /* The explanation module stays visually separated without a full-width black block. */
+    .explain{background:var(--wash);color:var(--ink)}
+    .explain .kicker,.explain .section-head>p{color:var(--muted)}
+    .flow{border-color:var(--line);background:transparent}
+    .flow article{border-color:var(--line);background:var(--panel)}
+    .flow article:nth-child(even){background:rgba(240,232,222,.72)}
+    .flow article>span,.flow .example,.note>span{color:var(--accent)}
+    .flow b,.note b{color:var(--ink)}
+    .flow p,.note p{color:var(--muted)}
+    .note{border-color:var(--line)}
+
     /* Portfolio visual system: preserve the teaching interaction, update only its presentation. */
     body{background:var(--paper);color:var(--ink)}
     nav{position:relative;max-width:var(--portfolio-max);margin:0 auto;min-height:0;padding:28px var(--portfolio-pad);border-bottom:0;background:transparent;backdrop-filter:none}
@@ -123,3 +134,14 @@
     .kicker,.nav-jump,.panel-head small,.brain .panel-head small,.micro,.chart-title,.metric small,.current small,.speech-foot,.note>span{font-size:13px}
     .brand{display:inline-flex;align-items:center;gap:9px}
     .brand::before{content:"";width:28px;height:28px;flex:0 0 28px;background:url("./assets/project-mark.svg") center/100% 100% no-repeat}
+
+    /* Final explanation-module override after the readability layer. */
+    .explain{background:var(--wash);color:var(--ink)}
+    .explain .kicker,.explain .section-head>p{color:var(--muted)}
+    .flow{border-color:var(--line);background:transparent}
+    .flow article{border-color:var(--line);background:var(--panel)}
+    .flow article:nth-child(even){background:rgba(240,232,222,.72)}
+    .flow article>span,.flow .example,.note>span{color:var(--accent)}
+    .flow b,.note b{color:var(--ink)}
+    .flow p,.note p{color:var(--muted)}
+    .note{border-color:var(--line)}
