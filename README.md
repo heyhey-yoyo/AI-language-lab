@@ -32,6 +32,16 @@ python -m http.server 8000
 http://localhost:8000
 ```
 
+## 自动验收
+
+无需安装任何依赖即可运行：
+
+```bash
+node --test tests/static-smoke.test.mjs
+```
+
+该检查会验证页面资源、脚本语法、关键实验控件、响应式样式与固定 ID；模型训练和生成效果仍按页面内预设语料手动验证。
+
 ## 部署
 
 纯静态页面，可部署到任意静态托管。例如 Cloudflare Pages（GitHub 集成）：

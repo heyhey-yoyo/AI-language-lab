@@ -23,6 +23,7 @@ AI Language Lab（页面标题「它怎么学会接话？」）是一个**字符
 | `index.html` | 页面结构（HTML），引用 `styles.css` 与 `app.js` |
 | `styles.css` | 全部样式（原单文件内 `<style>` 抽取，76 行） |
 | `app.js` | 全部模型与交互逻辑（原单文件内 `<script>` 抽取，231 行） |
+| `tests/static-smoke.test.mjs` | 零依赖静态验收：资源、脚本、关键控件、响应式样式与固定 ID |
 | `.gitignore` | 忽略 `.gh-config/`（GitHub CLI 本地配置，含认证 token，不得提交） |
 
 > 注：原仓库只有一个 ChatGPT 导出的单文件 `ai-language-lab-standalone.html`，内含约 280 行追踪拦截/哨兵守卫残留脚本及一批 `/Static/`、`/Web/`、`/_ooa/` 外部引用（静态托管上会 404）。2026-08-14 拆分时已全部清除，业务逻辑无损迁移至三文件结构。
@@ -39,7 +40,7 @@ python -m http.server 8000
 
 ## 测试
 
-无自动化测试框架。模型逻辑为确定性实现（固定随机种子），可通过以下方式手动回归：
+可运行 `node --test tests/static-smoke.test.mjs` 做零依赖静态验收。模型逻辑为确定性实现（固定随机种子），仍需通过以下方式手动回归：
 
 - 加载预设语料后点击「练 200 次」，损失曲线应明显下降，生成句子应逐渐贴近语料风格。
 - 权重初始化与 `trainOne()` 更新规则均确定，同种子下结果可复现。
