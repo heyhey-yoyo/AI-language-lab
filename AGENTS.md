@@ -16,17 +16,15 @@ AI Language Lab（页面标题「它怎么学会接话？」）是一个**字符
   - 温度：滑杆 `0.3–1.4`，默认 `0.7`。
 - **可视化**：转移矩阵（单元格颜色深浅 = 条件概率）、当前 token 的 Top-5 概率条、损失曲线（内联 SVG）、词表 token 条。
 
-## 仓库结构
+## 项目结构
 
 | 文件 | 作用 |
 | --- | --- |
 | `index.html` | 页面结构（HTML），引用 `styles.css` 与 `app.js` |
-| `styles.css` | 全部样式（原单文件内 `<style>` 抽取，76 行） |
-| `app.js` | 全部模型与交互逻辑（原单文件内 `<script>` 抽取，231 行） |
+| `styles.css` | 全部样式（76 行） |
+| `app.js` | 全部模型与交互逻辑（231 行） |
 | `tests/static-smoke.test.mjs` | 零依赖静态验收：资源、脚本、关键控件、响应式样式与固定 ID |
 | `.gitignore` | 忽略 `.gh-config/`（GitHub CLI 本地配置，含认证 token，不得提交） |
-
-> 注：原仓库只有一个 ChatGPT 导出的单文件 `ai-language-lab-standalone.html`，内含约 280 行追踪拦截/哨兵守卫残留脚本及一批 `/Static/`、`/Web/`、`/_ooa/` 外部引用（静态托管上会 404）。2026-08-14 拆分时已全部清除，业务逻辑无损迁移至三文件结构。
 
 ## 运行与构建
 
@@ -73,6 +71,10 @@ Build output directory: /
 - 无 `localStorage`、无 Cookie、无任何用户数据采集。
 - `.gh-config/` 若出现于本地（GitHub CLI 认证产物）已被 `.gitignore` 排除，不得提交。
 
+## 标志维护约定
+
+项目标志采用统一的深灰方章、米白线条与赤陶色识别点，页面标志与 favicon 共用同一 `project-mark.svg`。后续替换必须保持原标志容器宽高，不得借机改变页眉、网格或页面布局。
+
 ---
 
 ## AI 维护提醒
@@ -82,8 +84,3 @@ Build output directory: /
 > - **修改代码后必须同步更新本 AGENTS.md 与 README.md** — 功能增删、架构变更、部署方式变更都需要在两份文档中体现
 > - README.md 面向**人类用户**（功能介绍、运行方法、部署步骤），AGENTS.md 面向 **AI 代理**（架构、代码组织、开发约定），两份文件**不可互相替代**
 > - 保持三文件结构（`index.html` + `styles.css` + `app.js`）；新增/拆分文件时务必同步更新文件清单
-
-
-## 标志维护约定
-
-项目标志采用统一的深灰方章、米白线条与赤陶色识别点，页面标志与 favicon 共用同一 `project-mark.svg`。后续替换必须保持原标志容器宽高，不得借机改变页眉、网格或页面布局。
