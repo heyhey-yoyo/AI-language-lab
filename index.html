@@ -33,9 +33,9 @@
         <aside class="panel corpus">
           <div class="panel-head"><span class="num mono">01</span><div><b>先给它一些例子</b><small>每行写一句就好</small></div></div>
           <div class="preset-tabs" id="presetTabs">
-            <button class="active" data-preset="hello">问候</button>
-            <button data-preset="poem">小诗</button>
-            <button data-preset="cafe">咖啡馆</button>
+            <button class="active" data-preset="hello" aria-pressed="true">问候</button>
+            <button data-preset="poem" aria-pressed="false">小诗</button>
+            <button data-preset="cafe" aria-pressed="false">咖啡馆</button>
           </div>
           <textarea id="corpusInput" aria-label="给模型看的句子，每行一句" spellcheck="false"></textarea>
           <button class="load" id="loadCorpus">用这些句子重新开始</button>

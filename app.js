@@ -24,6 +24,16 @@
     let temperature = 0.7;
     let utteranceSeed = 1;
 
+    const accentRGB = (() => {
+      const value = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();
+      const match = value.match(/^#([0-9a-f]{6})$/i);
+      if (match) {
+        const n = parseInt(match[1], 16);
+        return [n >> 16 & 255, n >> 8 & 255, n & 255];
+      }
+      return [169, 79, 49];
+    })();
+
     function randomGenerator(seed) {
       let value = seed >>> 0;
       return () => {
@@ -140,7 +150,7 @@
           const value = probabilities[columnIndex] || 0;
           const cell = document.createElement("button");
           cell.className = "cell"; cell.dataset.row = rowToken;
-          cell.style.backgroundColor = `rgba(223,101,76,${Math.min(.88,.06 + value * 4.1)})`;
+          cell.style.backgroundColor = `rgba(${accentRGB[0]},${accentRGB[1]},${accentRGB[2]},${Math.min(.88,.06 + value * 4.1)})`;
           cell.title = `${rowToken} → ${columnToken}: ${(value * 100).toFixed(1)}%`;
           ui.matrix.append(cell);
         });
@@ -202,11 +212,15 @@
     ui.tabs.addEventListener("click", event => {
       const button = event.target.closest("button[data-preset]"); if (!button) return;
       activePreset = button.dataset.preset; ui.input.value = presets[activePreset];
-      ui.tabs.querySelectorAll("button").forEach(item => item.classList.toggle("active", item === button));
+      ui.tabs.querySelectorAll("button").forEach(item => {
+        const selectedTab = item === button;
+        item.classList.toggle("active", selectedTab);
+        item.setAttribute("aria-pressed", selectedTab ? "true" : "false");
+      });
       rebuild(ui.input.value);
     });
     ui.input.addEventListener("input", () => {
-      activePreset = "custom"; ui.tabs.querySelectorAll("button").forEach(item => item.classList.remove("active")); renderTokens(ui.input.value);
+      activePreset = "custom"; ui.tabs.querySelectorAll("button").forEach(item => { item.classList.remove("active"); item.setAttribute("aria-pressed", "false"); }); renderTokens(ui.input.value);
     });
     $("loadCorpus").addEventListener("click", () => rebuild(ui.input.value));
     ui.matrix.addEventListener("click", event => {

@@ -2,10 +2,8 @@
     :root {
       --paper:#f3eee5;
       --ink:#24221f;
-      --muted:#6f6a62;
       --line:rgba(36,34,31,.18);
       --panel:rgba(255,252,247,.78);
-      --accent:#c15f3c;
       --accent-soft:#f0ded4;
       --wash:#ebe4d8;
       --portfolio-max:1440px;
@@ -51,12 +49,12 @@
     .prediction{display:grid;grid-template-columns:60px 22px 1fr;align-items:center;gap:7px;padding:16px;border:1px solid var(--line);border-radius:3px;background:var(--panel)}.current{text-align:center}.current small{display:block;margin-bottom:6px;color:#6b706b;font-size:8px}.current strong{display:grid;place-items:center;width:45px;height:45px;border-radius:3px;background:var(--accent);color:#fff;font:21px "Songti SC",serif}.arrow{color:#69716c}
     .bars{display:flex;flex-direction:column;gap:6px}.bar{display:grid;grid-template-columns:17px 1fr 34px;align-items:center;gap:6px;font-size:8px}.bar>b{font-size:10px}.bar>div{height:6px;border-radius:2px;background:#dedbd3;overflow:hidden}.bar i{display:block;height:100%;border-radius:inherit;background:var(--accent);transition:width .2s ease}.bar span{color:#6c716c;text-align:right}
     .metrics{display:grid;grid-template-columns:repeat(3,1fr);padding-bottom:17px;border-bottom:1px solid #cecec6}.metric{padding-right:7px;border-right:1px solid #cecec6}.metric:not(:first-child){padding-left:11px}.metric:last-child{border:0}.metric small{display:block;margin-bottom:6px;color:#7a7f79;font-size:8px}.metric strong{font:15px "SFMono-Regular",Consolas,monospace}.metric strong.accent{color:var(--accent)}
-    .chart-box{position:relative;margin-top:18px}.chart-title{display:flex;justify-content:space-between;color:#747a74;font-size:8px}.chart-title b{color:var(--ink);font-size:11px}.chart{display:block;width:100%;height:125px;margin-top:3px}.chart line{stroke:#d6d5cd;stroke-dasharray:3 4}.chart .area{fill:rgba(223,101,76,.11)}.chart .curve{fill:none;stroke:var(--accent);stroke-width:3;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
+    .chart-box{position:relative;margin-top:18px}.chart-title{display:flex;justify-content:space-between;color:#747a74;font-size:8px}.chart-title b{color:var(--ink);font-size:11px}.chart{display:block;width:100%;height:125px;margin-top:3px}.chart line{stroke:#d6d5cd;stroke-dasharray:3 4}.chart .area{fill:var(--accent);fill-opacity:.11}.chart .curve{fill:none;stroke:var(--accent);stroke-width:3;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
     .actions{display:grid;grid-template-columns:.75fr 1.22fr .92fr 36px;gap:6px;margin-top:6px}.actions button{min-height:39px;border-radius:3px;cursor:pointer;font-size:10px;font-weight:800}.step{border:1px solid var(--ink);background:transparent}.run{border:1px solid var(--ink);background:var(--ink);color:#fff}.run span{margin-right:5px}.run.running{background:var(--accent);color:var(--ink)}.run.running span{color:var(--ink)}.fast{border:1px solid var(--ink);background:transparent;color:var(--ink)}.reset{border:1px solid #bfc0b8;background:transparent;font-size:17px!important}
     .temperature{display:block;margin-top:17px;padding-top:15px;border-top:1px solid #cecec6}.temperature>span{display:flex;justify-content:space-between}.temperature b{font-size:9px}.temperature small{color:#777c76;font-size:8px}.temperature input{width:100%;margin:11px 0 4px;accent-color:var(--accent)}.ends i{color:#737873;font-size:8px;font-style:normal}
     .speech-meta{position:relative;z-index:1;display:flex;align-items:center;gap:11px;font-size:10px;font-weight:800}
     blockquote{position:relative;z-index:1;margin:18px 0 16px;font:600 clamp(31px,4vw,56px)/1.15 "Songti SC","STSong",Georgia,serif;letter-spacing:-.05em}.speech-foot{position:relative;z-index:1;display:flex;align-items:center;justify-content:flex-end;font-size:8px}.speech-foot button{padding:8px 0;border:0;border-bottom:1px solid var(--ink);background:transparent;cursor:pointer;font-size:9px}.speech-foot button:hover{color:var(--accent)}
-    .explain{background:var(--ink);color:#fff}.explain .kicker,.explain .section-head>p{color:#aeb4b0}.flow{display:grid;grid-template-columns:repeat(4,1fr);max-width:1500px;margin:auto;border-top:1px solid #535956;border-left:1px solid #535956}.flow article{min-height:265px;padding:23px;border-right:1px solid #535956;border-bottom:1px solid #535956}.flow article>span{display:block;width:auto;height:auto;margin-bottom:43px;border:0;color:#ef9b87;font-size:11px}.flow b{display:block;font:22px "Songti SC",serif}.flow p{min-height:60px;color:#c3c8c4;font-size:11px;line-height:1.7}.flow .example{display:block;color:#ef9b87;font-size:9px}.note{display:grid;grid-template-columns:150px 1fr;gap:24px;max-width:1500px;margin:30px auto 0;padding:24px 0;border-top:1px solid #535956}.note>span{color:#ef9b87;font-size:9px;letter-spacing:.08em}.note p{max-width:980px;margin:0;color:#c3c8c4;font-size:11px;line-height:1.75}.note b{color:#fff}
+    .flow{display:grid;grid-template-columns:repeat(4,1fr);max-width:1500px;margin:auto;border-top:1px solid #535956;border-left:1px solid #535956}.flow article{min-height:265px;padding:23px;border-right:1px solid #535956;border-bottom:1px solid #535956}.flow article>span{display:block;width:auto;height:auto;margin-bottom:43px;border:0;color:#ef9b87;font-size:11px}.flow b{display:block;font:22px "Songti SC",serif}.flow p{min-height:60px;color:#c3c8c4;font-size:11px;line-height:1.7}.flow .example{display:block;color:#ef9b87;font-size:9px}.note{display:grid;grid-template-columns:150px 1fr;gap:24px;max-width:1500px;margin:30px auto 0;padding:24px 0;border-top:1px solid #535956}.note>span{color:#ef9b87;font-size:9px;letter-spacing:.08em}.note p{max-width:980px;margin:0;color:#c3c8c4;font-size:11px;line-height:1.75}.note b{color:#fff}
 
     /* Readability pass: comfortable defaults for laptop and high-DPI screens. */
     nav{min-height:76px}
@@ -75,17 +73,6 @@
     h1,h2,h3{text-wrap:balance}p{text-wrap:pretty}
     @media(max-width:820px){nav{min-height:70px;padding:0 18px}.brand{font-size:17px}.hero{min-height:auto;padding:78px 18px 88px}h1{font-size:clamp(53px,16vw,76px)}.intro{font-size:17px;line-height:1.8}main section{padding:76px 18px 90px}.section-head{display:block}.section-head h2{font-size:42px}.section-head>p{margin-top:18px;font-size:16px}.lab-grid{display:block;box-shadow:8px 9px 0 #d9d7ce}.corpus,.brain,.controls{padding:21px}.controls{min-height:0}.speech{min-height:230px;padding:25px 22px}.speech blockquote{font-size:38px}.flow{grid-template-columns:1fr}.flow article{min-height:265px;padding:24px}.flow article>span{margin-bottom:34px}.flow p{min-height:0}.note{grid-template-columns:1fr;gap:12px}.actions{grid-template-columns:1fr 1.2fr 1fr 42px}.actions button{font-size:13px}.matrix-shell{margin-left:0;padding-left:18px}.matrix{gap:5px}.matrix .label{font-size:12px}.cell{min-height:21px}.prediction{grid-template-columns:62px 20px 1fr;padding:16px}.bar{grid-template-columns:20px 1fr 42px}.micro{font-size:13px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
-
-    /* The explanation module stays visually separated without a full-width black block. */
-    .explain{background:var(--wash);color:var(--ink)}
-    .explain .kicker,.explain .section-head>p{color:var(--muted)}
-    .flow{border-color:var(--line);background:transparent}
-    .flow article{border-color:var(--line);background:var(--panel)}
-    .flow article:nth-child(even){background:rgba(240,232,222,.72)}
-    .flow article>span,.flow .example,.note>span{color:var(--accent)}
-    .flow b,.note b{color:var(--ink)}
-    .flow p,.note p{color:var(--muted)}
-    .note{border-color:var(--line)}
 
     /* Keep the page-section layout rules from shrinking grid panels. */
     .lab-grid > .panel{max-width:none;margin:0}
@@ -138,11 +125,13 @@
     .bar i{background:var(--accent)}
     .speech{background:var(--accent-soft)}
     .speech blockquote,.flow b{font-family:Georgia,"Times New Roman","Songti SC","STSong",serif;font-weight:400}
-    .explain{max-width:none;background:var(--ink)}
+    .explain{max-width:none}
     .flow{max-width:none;border-color:#53504b}
     .flow article{border-color:#53504b}
     .flow article>span,.flow .example{color:#ef9b87}
     .note{max-width:none;border-color:#53504b}
+    .brand{display:inline-flex;align-items:center;gap:12px}
+    .brand::before{content:"";width:48px;height:48px;flex:0 0 48px;background:url("./assets/project-mark.svg") center/100% 100% no-repeat}
     @media(max-width:820px){nav{padding:21px 18px}.hero{padding-inline:18px}main section{padding-inline:18px}.section-head{display:block}.section-head>p{margin-top:18px}.brand::before{width:40px;height:40px;flex-basis:40px}}
 
     /* Visual QA baseline: micro labels remain compact but never illegibly small. */
@@ -150,8 +139,6 @@
     .axis,.ends i{font-size:12px}
     .kicker,.nav-jump,.panel-head small,.brain .panel-head small,.micro,.chart-title,.metric small,.current small,.speech-foot,.note>span{font-size:13px}
     .micro,.axis,.chart-title,.metric small,.temperature small,.ends i,.panel-head small,.brain .panel-head small,.matrix .label,.preset-tabs button,.bar span,.current small,.arrow{color:#5f5a53}
-    .brand{display:inline-flex;align-items:center;gap:12px}
-    .brand::before{content:"";width:48px;height:48px;flex:0 0 48px;background:url("./assets/project-mark.svg") center/100% 100% no-repeat}
 
     /* Final explanation-module override after the readability layer. */
     .explain{background:var(--wash);color:var(--ink)}
