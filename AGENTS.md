@@ -56,7 +56,7 @@ node --test tests/static-smoke.test.mjs
 
 - **职责分离**：HTML 在 `index.html`，样式在 `styles.css`，逻辑与数据在 `app.js`。
 - CSS 变量定义在 `:root`，统一视觉令牌（颜色、字体、间距）；含 `Readability pass` 可读性增强节与多档媒体查询。实验区宽屏为三栏等高卡片加全宽生成结果，中等宽度折为两栏、手机折为单栏。
-- 视觉令牌沿用 `ydchen-portfolio`：`#f3eee5` 暖米白、`#24221f` 深色文字、`#6f6a62` 次级文字、`#a94f31` 陶土橙强调色（对比度加强）；实验面板、图表和控件的业务语义保持不变。
+- 视觉令牌沿用 `ydchen-portfolio`：`#f3eee5` 暖米白、`#24221f` 深色文字、`#5f5a53` 次级文字、`#a94f31` 陶土橙强调色（对比度加强）；实验面板、图表和控件的业务语义保持不变。
 - 视觉验收以正文 16px、实验控件与图表标签不小于 12px 为基线，并在 1440px 桌面与 390px 手机视口检查整体横向溢出。
 - 模型常量与关键函数：`START`/`END` 哨兵、`makeModel()`、`trainOne()`、`meanLoss()`、`generate()`、`softmax()`、`randomGenerator()`、`frequencyTokens()` 等，命名自解释，注释为中文。
 - 界面文案与注释为简体中文，标识符用英文。
@@ -77,9 +77,11 @@ node --test tests/static-smoke.test.mjs
 
 ### 交互与数据约束
 
-语料按钮 active 与 aria-pressed 同步，自定义输入取消预设选择；矩阵读取 --accent，并为非法颜色提供回退。
+语料按钮 active 与 aria-pressed 同步，自定义输入取消预设选择，但仅刷新词元预览；点击载入或重新开始才重建模型。训练按钮继续使用已载入模型。矩阵只展示起始符与最高频的 6 个字符，训练词表不受此展示限制；矩阵读取 --accent，并为非法颜色提供回退。
 
 ## 部署
+
+对外版本以 GitHub Release 标签为准；仓库没有 `package.json` 或独立应用版本常量。发布只更新 Release 标签，不新增版本文件或构建依赖；缓存格式等内部版本按行为独立演进。
 
 纯静态页面，可托管到任意静态站点。如需接入 Cloudflare Pages（GitHub 集成）：
 
