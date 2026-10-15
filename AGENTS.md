@@ -84,7 +84,7 @@ node --test tests/static-smoke.test.mjs
 
 对外版本以 GitHub Release 标签为准；仓库没有 `package.json` 或独立应用版本常量。发布只更新 Release 标签，不新增版本文件或构建依赖；缓存格式等内部版本按行为独立演进。
 
-纯静态页面，可托管到任意静态站点。如需接入 Cloudflare Pages（GitHub 集成）：
+纯静态页面，可托管到任意静态站点。如需接入 Cloudflare Pages（项目 `ai-language-lab`，GitHub 集成）：
 
 ```text
 Production branch: main
